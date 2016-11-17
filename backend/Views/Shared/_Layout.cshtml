@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 我的 ASP.NET 應用程式</title>
+    @*@Styles.Render("~/Content/css")*@
+    @Scripts.Render("~/bundles/modernizr")
+
+    <!---css --->
+    <!-- The Fonts -->
+    @*<link href="http://fonts.useso.com/css?family=Oswald|Droid+Sans:400,700" rel="stylesheet" />*@
+    <!-- The Main CSS File -->
+    <link rel="stylesheet" href="~/Content/style.css" />
+
+</head>
+<body>
+    @Html.Partial("_top_panelPartial")
+    @Html.Partial("_headerPartial")
+    @Html.Partial("_smallMenuPartial")
+    
+    <div class="wrapper contents_wrapper">
+
+        <aside class="sidebar">
+            <ul class="tab_nav">
+                <li class="active_tab i_32_dashboard">
+                    <a href="index.html" title="General Info">
+                        <span class="tab_label">Dashboard</span>
+                        <span class="tab_info">General Info</span>
+                    </a>
+                </li>
+                <li class="i_32_inbox">
+                    <a href="inbox.html" title="Your Messages">
+                        <span class="tab_label">Inbox</span>
+                        <span class="tab_info">Your Messages</span>
+                    </a>
+                </li>
+                <li class="i_32_charts">
+                    <a href="charts.html" title="Visual Data">
+                        <span class="tab_label">Charts</span>
+                        <span class="tab_info">Visual Data</span>
+                    </a>
+                </li>
+                <li class="i_32_ui">
+                    <a href="ui.html" title="Kit elements">
+                        <span class="tab_label">UI</span>
+                        <span class="tab_info">Kit elements</span>
+                    </a>
+                </li>
+                <li class="i_32_tables">
+                    <a href="tables.html" title="Some Rows">
+                        <span class="tab_label">Tables</span>
+                        <span class="tab_info">Some Rows</span>
+                    </a>
+                </li>
+                <li class="i_32_forms">
+                    <a href="forms.html" title="Some Fields">
+                        <span class="tab_label">Forms</span>
+                        <span class="tab_info">Some Fields</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <div class="contents">
+
+            @RenderBody()
+        </div>
+
+
+        </div>
+
+        <!--- insert  footer--->
+        @Html.Partial("_footerPartial");
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+    <!---js --->
+    <!-- Flot -->
+        <script src="~/Scripts/Flot/jquery.flot.js"></script>
+        <script src="~/Scripts/Flot/jquery.flot.resize.js"></script>
+        <script src="~/Scripts/Flot/jquery.flot.pie.js"></script>
+        <!-- DataTables -->
+        <script src="~/Scripts/DataTables/jquery.dataTables.min.js"></script>
+        <!-- ColResizable -->
+        <script src="~/Scripts/ColResizable/colResizable-1.3.js"></script>
+        <!-- jQuryUI -->
+        <script src="~/Scripts/jQueryUI/jquery-ui-1.8.21.min.js"></script>
+        <!-- Uniform -->
+        <script src="~/Scripts/Uniform/jquery.uniform.js"></script>
+        <!-- Tipsy -->
+        <script src="~/Scripts/Tipsy/jquery.tipsy.js"></script>
+        <!-- Elastic -->
+        <script src="~/Scripts/Elastic/jquery.elastic.js"></script>
+        <!-- ColorPicker -->
+        <script src="~/Scripts/ColorPicker/colorpicker.js"></script>
+        <!-- SuperTextarea -->
+        <script src="~/Scripts/SuperTextarea/jquery.supertextarea.min.js"></script>
+        <!-- UISpinner -->
+        <script src="~/Scripts/UISpinner/ui.spinner.js"></script>
+        <!-- MaskedInput -->
+        <script src="~/Scripts/MaskedInput/jquery.maskedinput-1.3.js"></script>
+        <!-- ClEditor -->
+        <script src="~/Scripts/ClEditor/jquery.cleditor.js"></script>
+        <!-- Full Calendar -->
+        <script src="~/Scripts/FullCalendar/fullcalendar.js"></script>
+        <!-- Color Box -->
+        <script src="~/Scripts/ColorBox/jquery.colorbox.js"></script>
+        <!-- Kanrisha Script -->
+        <script src="~/Scripts/kanrisha.js"></script>
+
+</body>
+</html>
